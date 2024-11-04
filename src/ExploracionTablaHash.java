@@ -19,8 +19,8 @@ public abstract class ExploracionTablaHash implements ITablaHash {
     }
 
     public void insertar(IHashable valor) {
-        int posisionActual = buscarPos(valor);
-        vector[posisionActual] = new EntradaHash(valor, true);
+        int posicionActual = buscarPos(valor);
+        vector[posicionActual] = new EntradaHash(valor, true);
     }
 
     public final void eliminar(IHashable valor) {
@@ -30,9 +30,9 @@ public abstract class ExploracionTablaHash implements ITablaHash {
     }
 
     public final IHashable buscar(IHashable valor) {
-        int posisionActual = buscarPos(valor);
-        confirmaBuscar(posisionActual, "buscar en ExploracionTablaHash");
-        return vector[posisionActual].getElemento();
+        int posicionActual = buscarPos(valor);
+        confirmaBuscar(posicionActual, "buscar en ExploracionTablaHash");
+        return vector[posicionActual].getElemento();
     }
 
     public final void vaciar() {
@@ -58,7 +58,7 @@ public abstract class ExploracionTablaHash implements ITablaHash {
     /**
      * Método abstracto para mostrar el resultado de la búsqueda.
      *
-     * @param posisionActual: posición donde finaliza la búsqueda.
+     * @param posicionActual: posición donde finaliza la búsqueda.
      * @param string:         mensaje de la búsqueda.
      */
     protected abstract void confirmaBuscar(int posicionActual, String string);

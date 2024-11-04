@@ -37,4 +37,9 @@ public class RecursoBiblioteca implements IHashable {
     public int hash(int tableSize) {
         return this.codigo % 10;
     }
+
+    @Override
+    public String toString() {
+        return "(" + codigo + ", " + titulo + ", " + tipo + ")";
+    }
 }
