@@ -1,18 +1,48 @@
-## Getting Started
+# TAED2 - TP2
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este proyecto implementa diferentes métodos de manejo de colisiones en tablas hash utilizando Java. La función hash utilizada es H(x) = X mod 10.
 
-## Folder Structure
+## Funcionalidades
 
-The workspace contains two folders by default, where:
+1. Función Hash
+   Implementación de la función hash H(x) = X mod 10 para determinar el índice de almacenamiento en la tabla.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+2. Métodos de Manejo de Colisiones
+   El proyecto incluye tres diferentes estrategias para manejar colisiones:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+   a. Sondeo Lineal
+   Búsqueda secuencial de la siguiente posición disponible
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+   Implementado en la clase TablaExploracionLineal
 
-## Dependency Management
+   b. Sondeo Cuadrático
+   Búsqueda de posiciones utilizando incrementos cuadráticos
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+   Implementado en la clase TablaExploracionCuadratica
+
+   c. Hashing Abierto
+   Utilización de listas enlazadas para manejar colisiones
+
+   Implementado en la clase TablaHashAbierta
+
+3. Operaciones Principales
+   - Inserción de elementos
+   - Búsqueda de elementos
+   - Eliminación de elementos
+
+## Estructura del Proyecto
+
+Cada método de manejo de colisiones está implementado en su propia clase
+
+Interface común para mantener consistencia entre implementaciones
+
+Programa principal que permite elegir el método de manejo de colisiones deseado
+
+## Uso
+
+Para utilizar el programa:
+
+1. Compilar los archivos Java
+2. Ejecutar el programa principal
+3. Seleccionar el método de manejo de colisiones deseado
+4. Realizar operaciones de inserción, búsqueda y eliminación
