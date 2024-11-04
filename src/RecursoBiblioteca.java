@@ -35,7 +35,7 @@ public class RecursoBiblioteca implements IHashable {
 
     @Override
     public int hash(int tableSize) {
-        return this.codigo % 10;
+        return this.codigo % tableSize;
     }
 
     @Override

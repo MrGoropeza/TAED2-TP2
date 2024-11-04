@@ -3,7 +3,7 @@ public class App {
         var revista = new RecursoBiblioteca(10, "Revista", RecursoBiblioteca.Tipo.REVISTA);
 
         // Implementación de la función hash H(x) = x mod 10 para un RecursoBiblioteca
-        System.out.println("Hash de la revista: " + revista.hash(2));
+        System.out.println("Hash de la revista: " + revista.hash(10));
 
         var tablaExploracionCuadratica = new TablaExploracionCuadratica();
         var tablaExploracionLineal = new TablaExploracionLineal();
@@ -13,7 +13,7 @@ public class App {
         var video = new RecursoBiblioteca(40, "Video", RecursoBiblioteca.Tipo.VIDEO);
         var imagen = new RecursoBiblioteca(50, "Imagen", RecursoBiblioteca.Tipo.IMAGEN);
 
-        // Inserción de elementos en la tabla exploración cuadrática
+        System.out.println("Inserción de elementos en la tabla exploración cuadrática");
         tablaExploracionCuadratica.insertar(revista);
         tablaExploracionCuadratica.insertar(libro);
         tablaExploracionCuadratica.insertar(audio);
@@ -23,7 +23,7 @@ public class App {
         System.out.println("Tabla exploración cuadrática:");
         System.out.println(tablaExploracionCuadratica);
 
-        // Inserción de elementos en la tabla exploración lineal
+        System.out.println("Inserción de elementos en la tabla exploración lineal");
         tablaExploracionLineal.insertar(revista);
         tablaExploracionLineal.insertar(libro);
         tablaExploracionLineal.insertar(audio);
@@ -35,7 +35,7 @@ public class App {
 
         var tablaHashAbierta = new TablaHashAbierta();
 
-        // Inserción de elementos en la tabla hash abierta
+        System.out.println("Inserción de elementos en la tabla hash abierta");
         tablaHashAbierta.insertar(revista);
         tablaHashAbierta.insertar(libro);
         tablaHashAbierta.insertar(audio);
@@ -45,16 +45,34 @@ public class App {
         System.out.println("Tabla hash abierta:");
         System.out.println(tablaHashAbierta);
 
-        // Implementación de Biblioteca que puede usar distintas estrategias para
-        // manejar colisiones
+        System.out.println("Implementación de Biblioteca que puede usar distintas estrategias para manejar colisiones");
 
         // Biblioteca con Hashing Abierto
         var biblioteca = new Biblioteca(EstrategiaColisiones.HASH_ABIERTA);
+        biblioteca.addRecurso(revista);
+        biblioteca.addRecurso(libro);
+        biblioteca.addRecurso(audio);
+        biblioteca.addRecurso(video);
+        biblioteca.addRecurso(imagen);
+
+        System.out.println(biblioteca);
 
         // Biblioteca con Sondeo Lineal
         var bibliotecaLineal = new Biblioteca(EstrategiaColisiones.LINEAL);
+        bibliotecaLineal.addRecurso(revista);
+        bibliotecaLineal.addRecurso(libro);
+        bibliotecaLineal.addRecurso(audio);
+        bibliotecaLineal.addRecurso(video);
+        bibliotecaLineal.addRecurso(imagen);
+        System.out.println(bibliotecaLineal);
 
         // Biblioteca con Sondeo Cuadrático
         var bibliotecaCuadrática = new Biblioteca(EstrategiaColisiones.CUADRATICA);
+        bibliotecaCuadrática.addRecurso(revista);
+        bibliotecaCuadrática.addRecurso(libro);
+        bibliotecaCuadrática.addRecurso(audio);
+        bibliotecaCuadrática.addRecurso(video);
+        bibliotecaCuadrática.addRecurso(imagen);
+        System.out.println(bibliotecaCuadrática);
     }
 }

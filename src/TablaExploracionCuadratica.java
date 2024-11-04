@@ -9,6 +9,7 @@ public class TablaExploracionCuadratica extends ExploracionTablaHash {
     protected int buscarPos(IHashable valor) {
         int colision = 0;
         int posicionActual = valor.hash(vector.length);
+
         while (vector[posicionActual] != null && !vector[posicionActual].getElemento().equals(valor)) {
             posicionActual += 2 * ++colision - 1;
             if (posicionActual >= vector.length)

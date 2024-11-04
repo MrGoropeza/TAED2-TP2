@@ -3,7 +3,7 @@ import java.util.List;
 
 public class TablaHashAbierta implements ITablaHash {
 
-    private static final int TAMANIO_DEFAULT = 11;
+    private static final int TAMANIO_DEFAULT = 10;
     protected List<EntradaHash>[] vector;
     private int tamanioActual;
 

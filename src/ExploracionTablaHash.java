@@ -1,6 +1,6 @@
 public abstract class ExploracionTablaHash implements ITablaHash {
 
-    private static final int TAMANIO_DEFAULT = 11;
+    private static final int TAMANIO_DEFAULT = 10;
 
     protected EntradaHash[] vector;
 

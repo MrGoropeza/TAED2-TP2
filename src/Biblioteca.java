@@ -1,8 +1,11 @@
 public class Biblioteca {
 
     private ITablaHash tabla;
+    private EstrategiaColisiones estrategia;
 
     public Biblioteca(EstrategiaColisiones estrategia) {
+        this.estrategia = estrategia;
+
         switch (estrategia) {
             case CUADRATICA:
                 this.tabla = new TablaExploracionCuadratica();
@@ -38,7 +41,7 @@ public class Biblioteca {
 
     @Override
     public String toString() {
-        System.out.println("Recursos de la biblioteca:");
+        System.out.println("Recursos de la biblioteca (utilizando estrategia de colisiones " + this.estrategia + "):");
         return this.tabla.toString();
     }
 
